@@ -1,9 +1,9 @@
 # JavaScript React
 
 ## 참고 자료
-> [위키피디아] : ( https://en.wikipedia.org/wiki/React_(web_framework) )
-> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1720 )
-> [npm] : ( https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner )
+> [위키피디아] : ( https://en.wikipedia.org/wiki/React_(web_framework) )    
+> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1720 )    
+> [npm] : ( https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner )    
  
 ## 사전 준비
 > node.js 설치
