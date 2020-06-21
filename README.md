@@ -27,4 +27,11 @@
 > ```
 > npx create-react-app YOUR_APP_NAME
 > ```
-> 명령어를 실행한 경로에 YOUR_APP_NAME으로된 app이 생성될것이다.     
+> 명령어를 실행한 경로에 YOUR_APP_NAME으로된 app이 생성될것이다.    
+> app_name에 대문자는 사용하지 못한다.   
+
+## 프로젝트 실행
+> ```
+> cd YOUR_APP_NAME 
+> npx start             # 프로젝트 실행됨
+> ```
