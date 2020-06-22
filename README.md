@@ -33,5 +33,13 @@
 ## 프로젝트 실행
 > ```
 > cd YOUR_APP_NAME 
-> npx start             # 프로젝트 실행됨
+> npx start             # 프로젝트 실행됨 | 터미널에서 제공하는 링크로 페이지 확인 가능
 > ```
+
+## Normad Coders React 강의
+> # 2.0 Creating your first React Component
+>> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1547 )
+>> [요약] : Component는 HTML을 반환하는 함수의 기능   
+>>         React의 문법은 JSX를 사용하며 이는 JavaScript를 확장한 문법이다.   
+>>         따라서 코드 작성시    
+>>         your.js > import React from "react"; 구문이 없으면 문법 오류가 발생한다.   
