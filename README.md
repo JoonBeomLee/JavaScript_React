@@ -96,6 +96,7 @@
 >>          <YOUR_COMPONENT args1="args1" args2=2 args3="1234">         # args2의 타입이 string이 아니면 오류
 >>    )
 >> }
+>> ```
 >> ※ 자세한 내용은 위의 참조링크를 확인   
 >
 > ## 3 STATE
