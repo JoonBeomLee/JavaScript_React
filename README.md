@@ -6,6 +6,7 @@
 > [npm] : ( https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner )   
 > [create-react-app] : ( https://github.com/facebook/create-react-app )   
 > [React_PropTypes] : ( https://ko.reactjs.org/docs/typechecking-with-proptypes.html )
+> [React_LifeCycle] : ( https://ko.reactjs.org/docs/state-and-lifecycle.html )
  
 ## 사전 준비
 > node.js 설치
@@ -99,4 +100,58 @@
 >
 > ## 3 STATE
 >> ### 3.0 Class Components and State
->> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1552 )
+>> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1552 )   
+>> [요약]   
+>> 클래스 Component의 사용방법   
+>> ``` 
+>> class YOUR_CLASS extends React.Component {
+>>      state = {       # state는 오브젝트로 class의 변수를 저장하는 역할 
+>>          YOUR_VAR: 0 # 변수 초기화
+>>      };
+>>      YOUR_FUNCTION = () => {                 # 사용자 함수 선언 방법
+>>          console.log("YOUR_FUNCTION_ACTIVE");
+>>      };
+>>      render() {      # react는 render를 자동 호출하여 화면에 출력 가능하게 한다.
+>>          return ( 
+>>                 <h1> YOUR CLASS COMPONENT TESTING ! <h1> 
+>>                 <h2> YOUR STATE VAR IS {this.state.YOUR_VAR} <h2>        # this.state.VAR_NAME으로 참조하여 사용
+>>                 <button onClick={this.YOUR_FUNCTION}>YOUR_FUNCTION</button>  # this.FUN_NAME으로 참조 가능
+>>          );
+>>      }
+>> }
+>> ```
+>    
+>> ### 3.1 All you need to know about State
+>> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1553 )   
+>> [요약]   
+>> ```
+>> YOUR_FUNC() {
+>>  this.state.YOUR_VAR = 0;    # 값 직접 수정 불가능 ERROR
+>>  this.setState({YOUR_VAR= 1}) # setState를 통해 state를 새로운 값으로 전달하여 값 변환
+>>  this.setState(current => ({ YOUR_VAR : current.YOUR_VAR + 1}))      # current를 사용해 현재 값에다 추가적인 작업도 가능
+>> };   # setState 호출시 변경된 state값을 반영하기 위해 해당 부분의 render()를 새롭게 호출 값 반영하여 화면 출력
+>> 
+>> render () {
+>>      return ( 
+>>          <h1> MY STATE VAR IS {this.state.YOUR_VAR} </h1>    
+>>          <button onClick={this.YOUR_FUNC}>FUNC</button>      # FUNC을 통한 값 직접 변경시 오류 발생
+>> }
+>> ```
+>   
+>> ### 3.2 Component Life Cycle
+>> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1554 )   
+>> [요약]   
+>> render() 함수와 마찬가지로 React.Component에서 기본 제공하는 함수들.   
+>> Component가 호출되는 다양한 시점을 제공한다. 원하는 시점에 맞게 기능을 작성 할 수 있다.   
+>> mounting   # Component 생성
+>> updating   #           업데이트
+>> unMounting #           제거
+>> ※ 자세한 내용은 위의 참조링크를 확인   
+>   
+>> ### 3.3 Planning the Movie Component
+>> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1555 )   
+>   
+> ## 4 MAKING THE MOVIE APP
+>> ### 4.0 Fetching Movies from API
+>> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1556 )   
+>> [요약]   
