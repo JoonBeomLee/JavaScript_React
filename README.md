@@ -5,6 +5,7 @@
 > [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1720 )    
 > [npm] : ( https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner )   
 > [create-react-app] : ( https://github.com/facebook/create-react-app )   
+> [React_PropTypes] : ( https://ko.reactjs.org/docs/typechecking-with-proptypes.html )
  
 ## 사전 준비
 > node.js 설치
@@ -37,14 +38,14 @@
 > ```
 
 ## Normad Coders React 강의
-> ## JSX & PROPS
+> ## 2 JSX & PROPS
 > ### 2.0 Creating your first React Component
 >> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1547 )   
 >> [요약]   
 >> Component는 HTML을 반환하는 함수의 기능   
 >> React의 문법은 JSX를 사용하며 이는 JavaScript를 확장한 문법이다.   
 >> 따라서 코드 작성시    
->> your.js > import React from "react"; 구문이 없으면 문법 오류가 발생한다.   
+>> your.js > import React from 'react'; 구문이 없으면 문법 오류가 발생한다.   
 >> ※ 함수형 컴포넌트의 첫글자는 대문자여야 한다. (아닐시 작동 안됨)    
 >
 > ### 2.1 Reusable Components with JSX + Props
@@ -61,4 +62,41 @@
 > ### 2.2 Dynamic Component Generation
 >> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1549 )   
 >> [요약]   
->> 
+>> Component에서의 동적 데이터 처리 및 렌더링 방법
+>
+> ### 2.3 map Recap
+>> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1550 )   
+>
+> ### 2.4 Protection with PropTypes
+>> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1551 )   
+>> [요약]   
+>> propTypes    //  전달받은 props의 데이터 체크 가능   
+>> ```
+>> npm install prop-types      # 설치
+>> YOUR_APPS > package.json > dependencies 추가 확인
+>> import PropTypes from 'prop-types';      # module추가
+>> ```   
+>> function YOUR_COMPONENT({args1, args2, args3}){
+>>      return (
+>>         <h1>TESTING TYPE {args1} </h1> 
+>>         <h1>TESTING TYPE {args2} </h1> 
+>>         <h1>TESTING TYPE {args3} </h1> 
+>>  );    
+>> }
+>> YOUR_CONPONENT.proptypes = {                 # 전달되는 props의 args의 타입을 제한할 수 있다.
+>>  args1: PropTypes.string.isRequired,    
+>>  args1: PropTypes.string.isRequired,    
+>>  args1: PropTypes.string.isRequired,    
+>> }
+>>
+>> function PRINT_COMPONET(){
+>>    return (
+>>        <div>
+>>          <YOUR_COMPONENT args1="args1" args2=2 args3="1234">         # args2의 타입이 string이 아니면 오류
+>>    )
+>> }
+>> ※ 자세한 내용은 위의 참조링크를 확인   
+>
+> ## 3 STATE
+>> ### 3.0 Class Components and State
+>> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1552 )
