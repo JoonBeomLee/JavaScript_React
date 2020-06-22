@@ -76,7 +76,7 @@
 >> npm install prop-types      # 설치
 >> YOUR_APPS > package.json > dependencies 추가 확인
 >> import PropTypes from 'prop-types';      # module추가
->> ```   
+>>    
 >> function YOUR_COMPONENT({args1, args2, args3}){
 >>      return (
 >>         <h1>TESTING TYPE {args1} </h1> 
