@@ -50,10 +50,10 @@
 >> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1548 )   
 >> [요약] : Component에 인자 전달 및 사용방법   
 >>         ```
->>          function YOUR_COMPONEMT(props){
->>              return <h1> YOUR PROPS {props.arg} </h1> # 참조
->>          }
->>          <YOUR_COMPONENT arg="blabla"> # 호출
+>>          function YOUR_COMPONEMT(props){   
+>>              return <h1> YOUR PROPS {props.arg} </h1> # 참조   
+>>          }   
+>>          <YOUR_COMPONENT arg="blabla"> # 호출   
 >>          ```   
 >   
 > ### 2.2 Dynamic Component Generation
