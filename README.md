@@ -40,22 +40,25 @@
 > ## JSX & PROPS
 > ### 2.0 Creating your first React Component
 >> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1547 )   
->> [요약] : Component는 HTML을 반환하는 함수의 기능   
->>         React의 문법은 JSX를 사용하며 이는 JavaScript를 확장한 문법이다.   
->>         따라서 코드 작성시    
->>         your.js > import React from "react"; 구문이 없으면 문법 오류가 발생한다.   
->>         ※ 함수형 컴포넌트의 첫글자는 대문자여야 한다. (아닐시 작동 안됨)    
+>> [요약]   
+>> Component는 HTML을 반환하는 함수의 기능   
+>> React의 문법은 JSX를 사용하며 이는 JavaScript를 확장한 문법이다.   
+>> 따라서 코드 작성시    
+>> your.js > import React from "react"; 구문이 없으면 문법 오류가 발생한다.   
+>> ※ 함수형 컴포넌트의 첫글자는 대문자여야 한다. (아닐시 작동 안됨)    
 >
 > ### 2.1 Reusable Components with JSX + Props
 >> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1548 )   
->> [요약] : Component에 인자 전달 및 사용방법   
->>         ```
->>          function YOUR_COMPONEMT(props){   
->>              return <h1> YOUR PROPS {props.arg} </h1> # 참조   
->>          }   
->>          <YOUR_COMPONENT arg="blabla"> # 호출   
->>          ```   
+>> [요약]   
+>> Component에 인자 전달 및 사용방법   
+>> ```
+>> function YOUR_COMPONEMT(props){   
+>>  return <h1> YOUR PROPS {props.arg} </h1> # 참조   
+>> }   
+>> <YOUR_COMPONENT arg="blabla"> # 호출   
+>> ```   
 >   
 > ### 2.2 Dynamic Component Generation
 >> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1549 )   
->> [요약] : 
+>> [요약]   
+>> 
