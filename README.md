@@ -37,7 +37,7 @@
 > ```
 
 ## Normad Coders React 강의
-> # 2.0 Creating your first React Component
+> ### 2.0 Creating your first React Component
 >> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1547 )
 >> [요약] : Component는 HTML을 반환하는 함수의 기능   
 >>         React의 문법은 JSX를 사용하며 이는 JavaScript를 확장한 문법이다.   
