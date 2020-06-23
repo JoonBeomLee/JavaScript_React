@@ -6,7 +6,7 @@
 > [JavaScript_ES6] : ( https://www.w3schools.com/js/js_es6.asp )   
 > [npm] : ( https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner )   
 > [create-react-app] : ( https://github.com/facebook/create-react-app )   
-> [React_PropTypes] : ( https://ko.reactjs.org/docs/typechecking-with-proptypes.html )
+> [React_PropTypes] : ( https://ko.reactjs.org/docs/typechecking-with-proptypes.html )   
 > [React_LifeCycle] : ( https://ko.reactjs.org/docs/state-and-lifecycle.html )   
 > [React_Hook] : ( https://ko.reactjs.org/docs/hooks-intro.html )   
  
