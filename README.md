@@ -3,6 +3,7 @@
 ## 참고 자료
 > [위키피디아] : ( https://en.wikipedia.org/wiki/React_(web_framework) )    
 > [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1720 )    
+> [JavaScript_ES6] : ( https://www.w3schools.com/js/js_es6.asp )   
 > [npm] : ( https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner )   
 > [create-react-app] : ( https://github.com/facebook/create-react-app )   
 > [React_PropTypes] : ( https://ko.reactjs.org/docs/typechecking-with-proptypes.html )
@@ -100,7 +101,7 @@
 >> ※ 자세한 내용은 위의 참조링크를 확인   
 >
 > ## 3 STATE
->> ### 3.0 Class Components and State
+> ### 3.0 Class Components and State
 >> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1552 )   
 >> [요약]   
 >> 클래스 Component의 사용방법   
@@ -122,7 +123,7 @@
 >> }
 >> ```
 >    
->> ### 3.1 All you need to know about State
+> ### 3.1 All you need to know about State
 >> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1553 )   
 >> [요약]   
 >> ```
@@ -139,7 +140,7 @@
 >> }
 >> ```
 >   
->> ### 3.2 Component Life Cycle
+> ### 3.2 Component Life Cycle
 >> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1554 )   
 >> [요약]   
 >> render() 함수와 마찬가지로 React.Component에서 기본 제공하는 함수들.   
@@ -153,6 +154,49 @@
 >> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1555 )   
 >   
 > ## 4 MAKING THE MOVIE APP
->> ### 4.0 Fetching Movies from API
+> ### 4.0 Fetching Movies from API
 >> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1556 )   
 >> [요약]   
+>> axios 네트워크 통신(http)을 지원   
+>> ```
+>> npm install axios # 설치
+>> import axios from 'axios' # 사용
+>> ``` 
+>> YTS MovieList Api를 사용   
+>> ```
+>> # 비동기 함수 선언   
+>> async function YOUR_FUNCTION(){      # async로 함수 선언시 await 사용 가능   
+>>      const DATA = await axios.get(YOUR_URL); # axios의 작업이 끝날때 까지 대기한다.   
+>> }
+>> ``` 
+>   
+> ### 4.1 Rendering the Movies
+>> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1557 )   
+>   
+> ### 4.2 Styling the Movies
+>> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1558 )   
+>> [요약]   
+>> ```
+>> <tag style={{css_code}} />       # style={{ }}을 통해서 css를 적용할수 있다.
+>> ```
+>   
+> ### 4.3 Adding Genres
+>> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1559 )   
+>> [요약]   
+>> JSX 내부   
+>> ```
+>> <tag class="ERROR_YOUR_CLASS_NAME">  # class는 javaScript의 class예약어와 충돌이 발생하기 때문에 className을 사용한다. 
+>> <tag className="CORRECT_YOUR_CLASS_NAME> # render시 className => class로 출력이 된다.
+>> ```   
+>   
+> ### 4.4 Styles Timelapse
+>> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1560 )   
+>   
+> ### 4.5 Cutting the Summary
+>> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1561 )
+>> [요약]   
+>> ```
+>> # javascript array slice
+>> const YOUR_ARRAY = "TESTTESTTESTTESTTESTTEST";
+>> YOUR_ARRAY.slice(START_POINT, END_POINT)         # 문자열을 시작과 끝지점을 잘라서 반환   
+>> ```
