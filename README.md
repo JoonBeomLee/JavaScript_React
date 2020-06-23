@@ -7,7 +7,8 @@
 > [npm] : ( https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner )   
 > [create-react-app] : ( https://github.com/facebook/create-react-app )   
 > [React_PropTypes] : ( https://ko.reactjs.org/docs/typechecking-with-proptypes.html )
-> [React_LifeCycle] : ( https://ko.reactjs.org/docs/state-and-lifecycle.html )
+> [React_LifeCycle] : ( https://ko.reactjs.org/docs/state-and-lifecycle.html )   
+> [React_Hook] : ( https://ko.reactjs.org/docs/hooks-intro.html )   
  
 ## 사전 준비
 > node.js 설치
@@ -193,10 +194,91 @@
 >> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1560 )   
 >   
 > ### 4.5 Cutting the Summary
->> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1561 )
+>> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1561 )   
 >> [요약]   
 >> ```
 >> # javascript array slice
 >> const YOUR_ARRAY = "TESTTESTTESTTESTTESTTEST";
 >> YOUR_ARRAY.slice(START_POINT, END_POINT)         # 문자열을 시작과 끝지점을 잘라서 반환   
 >> ```
+>   
+> ## 5 CONCLUSIONS
+> ### 5.0 Deploying to Github Pages
+>> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1562 )   
+>> [요약]    
+>> ```
+>> npm install gh-pages     # Git Hub를 통한 웹 배포를 할 수 있다.
+>> YOUR_APP > pakgae.json > 
+>> """
+>> "scripts" :{
+>>  "build":  "react-scripts build" # pakage.json 수정후 적용 위해 build 실행 필요
+>>  "deploy": "gh-pages -d build"            # script에 추가  
+>>  "predeploy": "npm run build"    # 작성한 app/*.js를 배포전 최적화 위한 명령어 추가
+>> }
+>> """
+>> "homepage": "https://{YOUR_GITHUB_USER_NAME}.github.io/{YOUR_PROJECT_NAME_IN_GITHUB}"        # 접근가능한 경로 설정 필요
+>>   
+>> npm run deploy       # deploy 호출시 predeploy를 호출 src/YOUR.js 작성된 파일을 기반으로 build/ 에 최적화하여 파일 생성 
+>> 완료시 hompage의 링크로 페이지 접근 가능   
+>> ```
+>   
+> ### 5.1 Are we done?
+>> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1562 )   
+>> [요약]   
+>> class Component's state의 역할을 하는 React Hook을 알아보자. 위의 참조 링크 확인.   
+>  
+> ## 6 ROUTING BONUS
+> ### 6.0 Getting Ready for the Router
+>> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1564 )   
+>> [요약]   
+>> react-router-dom 접근하는 경로별 각각의 페이지를 보여줄 수 있다.   
+>> ```
+>> npm install react-router-dom # 설치
+>> ```
+>   
+> ### 6.1 Building The Router
+>> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1565 )   
+>> [요약]   
+>> ```
+>> import { HashRouter, Route } from 'react-router-dom'     # react-router-dom 모듈 선언
+>> import YOUR_COMPONENT from 'YOUR_COMPONENT_PATH'         # Router로 출력할 컴포넌트
+>> """
+>> <HashRouter>
+>>  <Router path="YOUR_URL_PATH", component={YOUR_COMPONENT} />     # path에 지정된 경로로 접근시 component에 작성한 페이지 출력
+>>  <Router path="1", component={YOUR_COMPONENT} />     
+>>  <Router path="1/2", component={YOUR_COMPONENT} />     # 접근 url이 1/2일경우 2개의 컴포넌트가 출력된다.
+>>  <Router path="1/2" exact={true}, component={YOUR_COMPONENT} />     # exact를 추가하면 url이 정확히 일치 할 때만 컴포넌트를 출력한다.
+>> </HashRouter>
+>> ```
+>   
+> ### 6.2 Building The Navigation
+>> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1566 )   
+>> [요약]   
+>> ```
+>> <a href="TARGET_URL"> href </a>            # href를 사용할시 페이지 새로고침이 발생
+>> import {Link} from 'react-router-dom';
+>> <Link to="TARGET_URL"> Link </Link>        # react 멈춤 없이 url 이동 가능
+>> ```   
+>   
+> ### 6.3 Sharing Props Between Routes
+>> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1567 )   
+>> [요약]   
+>> Route시 porps 전달하고 사용하는 방법   
+>> ```
+>> <Link to="URL"> LINK </Link>             # 앞서 Link를 통해 원하는 URL로 페이지를 이동했다면
+>> <Link to={{                              # 단순 이동 뿐아니라 prop데이터를 전달할 수도 있다. 
+>>      pathname: URL,                      # pathname으로 이동 url 지정
+>>      state: {                            # 이동시 전달할 데이터 삽입  
+>>          prop1: data1,
+>>          prop2: data2,
+>>          """"""   
+>>      }
+>> }}>
+>> ```
+>   
+> ### 6.4 Redirecting
+>> [강의] : ( https://nomadcoders.co/react-fundamentals/lectures/1568 )   
+>> [요약]   
+>> Route로 이동시 전달되는 prop은 기본적으로 다양한 데이터를 가지고 있다. 그 중   
+>> history는 페이지 이동 기록을 가지고 있는데 props.history.push("YOUR_PATH")를 통해   
+>> 원하는 경로로 이동(redirect)이 가능하다.   
